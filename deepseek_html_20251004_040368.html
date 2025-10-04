@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Placement Drive Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .form-header {
+            text-align: center;
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .form-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+        }
+        .form-header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .form-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4a6491;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        .checkbox-item input, .radio-item input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        .file-upload {
+            border: 2px dashed #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+        }
+        .declaration {
+            background-color: #e8f4fd;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #219653, #27ae60);
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .form-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="placementForm">
+        <!-- Header Section -->
+        <div class="form-header">
+            <h1>Mega Placement Drive – October 2025</h1>
+            <p>Organized by Skillected Education Pvt. Ltd.</p>
+            <p>📢 Multiple companies are hiring freshers and experienced candidates across various domains.</p>
+            <p>👉 Please fill out the registration form carefully.</p>
+            <p>👉 Shortlisted candidates will be contacted for further rounds.</p>
+        </div>
+
+        <!-- Candidate Information -->
+        <div class="form-section">
+            <h2>Candidate Information</h2>
+            
+            <div class="form-group">
+                <label for="fullName" class="required">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Email ID</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobile" class="required">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="alternateMobile">Alternate Contact Number</label>
+                <input type="tel" id="alternateMobile" name="alternateMobile">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob" class="required">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="required">Gender</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="other" name="gender" value="Other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="currentLocation" class="required">Current Location</label>
+                <input type="text" id="currentLocation" name="currentLocation" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="preferredLocation">Preferred Job Location</label>
+                <input type="text" id="preferredLocation" name="preferredLocation">
+            </div>
+        </div>
+
+        <!-- Education Details -->
+        <div class="form-section">
+            <h2>Education Details</h2>
+            
+            <div class="form-group">
+                <label for="qualification" class="required">Highest Qualification</label>
+                <select id="qualification" name="qualification" required>
+                    <option value="">Select Qualification</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Graduate">Graduate</option>
+                    <option value="Post Graduate">Post Graduate</option>
+                    <option value="MBA">MBA</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="specialization" class="required">Specialization / Stream</label>
+                <input type="text" id="specialization" name="specialization" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="passingYear" class="required">Passing Year</label>
+                <select id="passingYear" name="passingYear" required>
+                    <option value="">Select Year</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="percentage" class="required">Percentage / CGPA</label>
+                <input type="text" id="percentage" name="percentage" required>
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="form-section">
+            <h2>Work Experience</h2>
+            
+            <div class="form-group">
+                <label class="required">Are you a Fresher or Experienced?</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="fresher" name="experience" value="Fresher" required>
+                        <label for="fresher">Fresher</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="experienced" name="experience" value="Experienced">
+                        <label for="experienced">Experienced</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="totalExperience">If Experienced, Mention Total Experience</label>
+                <input type="text" id="totalExperience" name="totalExperience">
+            </div>
+            
+            <div class="form-group">
+                <label for="previousCompany">Previous Company</label>
+                <input type="text" id="previousCompany" name="previousCompany">
+            </div>
+            
+            <div class="form-group">
+                <label for="previousDesignation">Previous Designation</label>
+                <input type="text" id="previousDesignation" name="previousDesignation">
+            </div>
+        </div>
+
+        <!-- Job Preferences -->
+        <div class="form-section">
+            <h2>Job Preferences</h2>
+            
+            <div class="form-group">
+                <label class="required">Select Company & Job Role You Are Interested In</label>
+                <div class="checkbox-group">
+                    <!-- BTW Visa Services -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role1" name="jobRoles" value="BTW Visa Services – Digital Marketing Executive">
+                        <label for="role1">BTW Visa Services – Digital Marketing Executive</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role2" name="jobRoles" value="BTW Visa Services – SEO Specialist">
+                        <label for="role2">BTW Visa Services – SEO Specialist</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role3" name="jobRoles" value="BTW Visa Services – Digital Marketing Intern">
+                        <label for="role3">BTW Visa Services – Digital Marketing Intern</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role4" name="jobRoles" value="BTW Visa Services – Visa Executive">
+                        <label for="role4">BTW Visa Services – Visa Executive</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role5" name="jobRoles" value="BTW Visa Services – Sales Marketing Intern">
+                        <label for="role5">BTW Visa Services – Sales Marketing Intern</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role6" name="jobRoles" value="BTW Visa Services – Business Development Executive">
+                        <label for="role6">BTW Visa Services – Business Development Executive</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role7" name="jobRoles" value="BTW Visa Services – Business Development Intern">
+                        <label for="role7">BTW Visa Services – Business Development Intern</label>
+                    </div>
+                    
+                    <!-- HDFC Bank Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role8" name="jobRoles" value="HDFC Bank Ltd – Relationship Officer">
+                        <label for="role8">HDFC Bank Ltd – Relationship Officer</label>
+                    </div>
+                    
+                    <!-- Samro License Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role9" name="jobRoles" value="Samro License Pvt Ltd – Scripting Developer">
+                        <label for="role9">Samro License Pvt Ltd – Scripting Developer</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role10" name="jobRoles" value="Samro License Pvt Ltd – Business Development Executive">
+                        <label for="role10">Samro License Pvt Ltd – Business Development Executive</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role11" name="jobRoles" value="Samro License Pvt Ltd – Data Science Intern">
+                        <label for="role11">Samro License Pvt Ltd – Data Science Intern</label>
+                    </div>
+                    
+                    <!-- Zitrix Technologies Pvt Ltd 3 -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role12" name="jobRoles" value="Zitrix Technologies Pvt Ltd 3 – MBA Intern (Operations Management)">
+                        <label for="role12">Zitrix Technologies Pvt Ltd 3 – MBA Intern (Operations Management)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role13" name="jobRoles" value="Zitrix Technologies Pvt Ltd 3 – MBA Intern (Marketing & Brand Development)">
+                        <label for="role13">Zitrix Technologies Pvt Ltd 3 – MBA Intern (Marketing & Brand Development)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role14" name="jobRoles" value="Zitrix Technologies Pvt Ltd 3 – MBA Intern (Finance & Business Analytics)">
+                        <label for="role14">Zitrix Technologies Pvt Ltd 3 – MBA Intern (Finance & Business Analytics)</label>
+                    </div>
+                    
+                    <!-- Transparian Consultancy Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role15" name="jobRoles" value="Transparian Consultancy Pvt Ltd – Accountant">
+                        <label for="role15">Transparian Consultancy Pvt Ltd – Accountant</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role16" name="jobRoles" value="Transparian Consultancy Pvt Ltd – BDA">
+                        <label for="role16">Transparian Consultancy Pvt Ltd – BDA</label>
+                    </div>
+                    
+                    <!-- Axis Bank Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role17" name="jobRoles" value="Axis Bank Ltd – Banking Officer">
+                        <label for="role17">Axis Bank Ltd – Banking Officer</label>
+                    </div>
+                    
+                    <!-- Ever Electronics ILJIN Electronics Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role18" name="jobRoles" value="Ever Electronics ILJIN Electronics Pvt Ltd – Apprenticeship Trainee">
+                        <label for="role18">Ever Electronics ILJIN Electronics Pvt Ltd – Apprenticeship Trainee</label>
+                    </div>
+                    
+                    <!-- Bajaj Auto Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role19" name="jobRoles" value="Bajaj Auto Ltd – Apprenticeship Trainee">
+                        <label for="role19">Bajaj Auto Ltd – Apprenticeship Trainee</label>
+                    </div>
+                    
+                    <!-- Immortal Manpower Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role20" name="jobRoles" value="Immortal Manpower Pvt Ltd – Senior Executive">
+                        <label for="role20">Immortal Manpower Pvt Ltd – Senior Executive</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role21" name="jobRoles" value="Immortal Manpower Pvt Ltd – Junior Executive">
+                        <label for="role21">Immortal Manpower Pvt Ltd – Junior Executive</label>
+                    </div>
+                    
+                    <!-- Hypenin -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role22" name="jobRoles" value="Hypenin – Operations Intern">
+                        <label for="role22">Hypenin – Operations Intern</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role23" name="jobRoles" value="Hypenin – Business Development Intern">
+                        <label for="role23">Hypenin – Business Development Intern</label>
+                    </div>
+                    
+                    <!-- Motion Education Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role24" name="jobRoles" value="Motion Education Pvt Ltd – Marketing Associate">
+                        <label for="role24">Motion Education Pvt Ltd – Marketing Associate</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role25" name="jobRoles" value="Motion Education Pvt Ltd – Admission Associate">
+                        <label for="role25">Motion Education Pvt Ltd – Admission Associate</label>
+                    </div>
+                    
+                    <!-- Chetas Controls Systems Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role26" name="jobRoles" value="Chetas Controls Systems Pvt Ltd – Software Developers">
+                        <label for="role26">Chetas Controls Systems Pvt Ltd – Software Developers</label>
+                    </div>
+                    
+                    <!-- Recruit CRM -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role27" name="jobRoles" value="Recruit CRM – Customer Success Associate">
+                        <label for="role27">Recruit CRM – Customer Success Associate</label>
+                    </div>
+                    
+                    <!-- KAS Global Commerce Inc 4 -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role28" name="jobRoles" value="KAS Global Commerce Inc 4 – E-commerce Account Management Intern">
+                        <label for="role28">KAS Global Commerce Inc 4 – E-commerce Account Management Intern</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role29" name="jobRoles" value="KAS Global Commerce Inc 4 – E-commerce Sales Intern (Inside Sales)">
+                        <label for="role29">KAS Global Commerce Inc 4 – E-commerce Sales Intern (Inside Sales)</label>
+                    </div>
+                    
+                    <!-- Axiomen Tech Solutions Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role30" name="jobRoles" value="Axiomen Tech Solutions Pvt Ltd – MERN Stack Developer">
+                        <label for="role30">Axiomen Tech Solutions Pvt Ltd – MERN Stack Developer</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role31" name="jobRoles" value="Axiomen Tech Solutions Pvt Ltd – Embedded System Engineer">
+                        <label for="role31">Axiomen Tech Solutions Pvt Ltd – Embedded System Engineer</label>
+                    </div>
+                    
+                    <!-- Way To Hire -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role32" name="jobRoles" value="Way To Hire – Customer Success Associate">
+                        <label for="role32">Way To Hire – Customer Success Associate</label>
+                    </div>
+                    
+                    <!-- Rise Up Consultancy -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role33" name="jobRoles" value="Rise Up Consultancy – Back Office Executive (Excel)">
+                        <label for="role33">Rise Up Consultancy – Back Office Executive (Excel)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role34" name="jobRoles" value="Rise Up Consultancy – Customer Support (Voice, Chat, Email Process)">
+                        <label for="role34">Rise Up Consultancy – Customer Support (Voice, Chat, Email Process)</label>
+                    </div>
+                    
+                    <!-- Oxcytech Technologies Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role35" name="jobRoles" value="Oxcytech Technologies Pvt Ltd – Full Stack Developer Intern">
+                        <label for="role35">Oxcytech Technologies Pvt Ltd – Full Stack Developer Intern</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role36" name="jobRoles" value="Oxcytech Technologies Pvt Ltd – Full Stack Developer Job">
+                        <label for="role36">Oxcytech Technologies Pvt Ltd – Full Stack Developer Job</label>
+                    </div>
+                    
+                    <!-- Skillected Education Pvt Ltd -->
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="role37" name="jobRoles" value="Skillected Education Pvt Ltd – BDA">
+                        <label for="role37">Skillected Education Pvt Ltd – BDA</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Documents -->
+        <div class="form-section">
+            <h2>Upload Documents</h2>
+            
+            <div class="form-group">
+                <label for="resume" class="required">Upload Resume (PDF/DOC)</label>
+                <div class="file-upload">
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                    <p>Accepted formats: PDF, DOC, DOCX</p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="photo" class="required">Upload Passport Size Photo (JPG/PNG)</label>
+                <div class="file-upload">
+                    <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+                    <p>Accepted formats: JPG, JPEG, PNG</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Declaration -->
+        <div class="form-section">
+            <h2>Declaration</h2>
+            
+            <div class="declaration">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="declaration" name="declaration" required>
+                    <label for="declaration" class="required">I hereby declare that the information provided above is true to the best of my knowledge.</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit Registration</button>
+    </form>
+
+    <script>
+        document.getElementById('placementForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation for job roles (at least one must be selected)
+            const jobRoles = document.querySelectorAll('input[name="jobRoles"]:checked');
+            if (jobRoles.length === 0) {
+                alert('Please select at least one job role you are interested in.');
+                return;
+            }
+            
+            // If validation passes, you would typically send the data to a server here
+            alert('Thank you for your registration! Shortlisted candidates will be contacted for further rounds.');
+            // this.submit(); // Uncomment this to actually submit the form
+        });
+    </script>
+</body>
+</html>
